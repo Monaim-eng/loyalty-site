@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Loyalty — Digital rewards cards for Bahrain's finest venues</title>
+<meta name="description" content="Loyalty gives restaurants, lounges and bars a premium rewards card that lives in Apple Wallet and Google Wallet. No app to download.">
+<meta name="theme-color" content="#141210">
+<style>
+:root{--bg:#141210;--surface:#1F1C18;--surface2:#2A2621;--line:#3D372F;--text:#F3E9D2;--muted:#D9C9A8;--dim:#9A8C74;--gold:#CDA55B;--gold2:#E3C07E;--gold-dim:#8A6F3A;--serif:Georgia,"Times New Roman",serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:16px/1.6 var(--sans);-webkit-text-size-adjust:100%;
+ background-image:radial-gradient(620px 440px at 92% -6%,rgba(205,165,91,.16),transparent 70%),radial-gradient(520px 400px at -10% 60%,rgba(90,70,40,.30),transparent 70%);min-height:100vh}
+a{color:var(--gold2)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1040px,100% - 40px);margin:0 auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.mark{font:600 26px/1 var(--serif);letter-spacing:7px;color:var(--gold);text-decoration:none}
+nav .links{display:flex;gap:22px;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+nav .links a{color:var(--muted);text-decoration:none}nav .links a:hover{color:var(--gold)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--gold)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:56px 0 72px}
+h1{font:600 clamp(38px,6vw,60px)/1.06 var(--serif);margin:14px 0 18px}
+.lead{color:var(--muted);font-size:18px;max-width:34em}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 24px;border-radius:14px;border:1px solid var(--line);background:var(--surface2);color:var(--text);font-weight:700;text-decoration:none}
+.btn.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));border-color:var(--gold);color:#1A1410;box-shadow:0 12px 30px rgba(205,165,91,.25)}
+.card{position:relative;border-radius:26px;padding:26px 24px;background:linear-gradient(155deg,#3A3228 0%,#26211B 45%,#141210 100%);border:1px solid var(--gold);box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 1px rgba(205,165,91,.15) inset;overflow:hidden;transform:rotate(-3deg);animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+.card::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.08),transparent);transform:skewX(-18deg);animation:sheen 5s ease-in-out 1s infinite}
+@keyframes rise{from{transform:translateY(30px) rotate(-3deg)}to{opacity:1;transform:rotate(-3deg)}}
+@keyframes sheen{0%,60%{left:-60%}100%{left:130%}}
+.ctop{display:flex;justify-content:space-between;align-items:center}
+.ctop .nm{font:600 22px/1 var(--serif);letter-spacing:6px;color:var(--gold)}
+.ctop small{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.pts{margin-top:26px;display:flex;align-items:baseline;gap:10px}
+.pts b{font:600 68px/1 var(--serif)}.pts span{font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.bar{margin-top:14px;height:10px;border-radius:6px;background:#332C24;overflow:hidden}.bar i{display:block;height:100%;width:64%;border-radius:6px;background:linear-gradient(90deg,var(--gold-dim),var(--gold2))}
+.cbot{margin-top:20px;display:flex;justify-content:space-between;align-items:flex-end;gap:14px}
+.qr{width:74px;height:74px;border-radius:10px;background:#F3E9D2;padding:7px;display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.qr i{background:#141210;border-radius:1px}.qr i.o{background:transparent}
+.code small{display:block;text-align:right;font-size:10px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.code b{font:600 38px/1 var(--serif);letter-spacing:6px}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font:600 clamp(30px,4vw,40px)/1.1 var(--serif);margin:10px 0 28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px}
+.panel .n{font:600 34px/1 var(--serif);color:var(--gold)}
+.panel h3{font:600 21px/1.2 var(--serif);margin:12px 0 8px}
+.panel p{color:var(--muted);font-size:15px}
+.legal{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.legal p,.legal li{color:var(--muted);font-size:15px}.legal ul{padding-left:18px;margin-top:8px}
+footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--dim);font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:24px}.grid,.legal{grid-template-columns:1fr}nav .links{display:none}.card{max-width:420px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="mark" href="#">LOYALTY</a>
+    <div class="links"><a href="#how">How it works</a><a href="#venues">For venues</a><a href="#support">Support</a></div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="eyebrow">Bahrain · Rewards, reimagined</div>
+      <h1>Miles for the places you love.</h1>
+      <p class="lead">Loyalty gives Bahrain's finest restaurants, lounges and bars a premium rewards card that lives in the guest's Apple Wallet or Google Wallet. No app to download. Points on every visit.</p>
+      <div class="cta"><a class="btn primary" href="#venues">For venues</a><a class="btn" href="#how">How it works</a></div>
+    </div>
+    <div aria-hidden="true">
+      <div class="card">
+        <div class="ctop"><span class="nm">LOYALTY</span><small>Gold member</small></div>
+        <div class="pts"><b>320</b><span>Points</span></div>
+        <div class="bar"><i></i></div>
+        <div class="cbot">
+          <div class="qr" id="qr"></div>
+          <div class="code"><small>Your code</small><b>4827</b></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="how">
+    <div class="eyebrow">How it works</div>
+    <h2>Three taps. No app.</h2>
+    <div class="grid">
+      <div class="panel"><div class="n">01</div><h3>Scan &amp; join</h3><p>Guests scan a QR code at the venue and join in seconds with their name and phone or email.</p></div>
+      <div class="panel"><div class="n">02</div><h3>Add to Wallet</h3><p>Their rewards card goes straight into Apple Wallet or Google Wallet, on iPhone and Android alike.</p></div>
+      <div class="panel"><div class="n">03</div><h3>Earn &amp; enjoy</h3><p>Points are added on every visit. The card updates by itself, and rewards are ready when they are earned.</p></div>
+    </div>
+  </section>
+
+  <section id="venues">
+    <div class="eyebrow">For venues</div>
+    <h2>Built for premium hospitality.</h2>
+    <div class="grid">
+      <div class="panel"><h3>Staff app</h3><p>Scan a guest's card, add points from the bill and hand out rewards, from any phone or tablet.</p></div>
+      <div class="panel"><h3>Owner dashboard</h3><p>Members, visits, top guests and rewards given, live. Set your own points rules and rewards.</p></div>
+      <div class="panel"><h3>Your brand</h3><p>The card carries your name and style, and you can send offers straight to your guests' lock screens.</p></div>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="eyebrow">Support &amp; policies</div>
+    <h2>Help with your card.</h2>
+    <div class="legal">
+      <div class="panel">
+        <h3>Customer support</h3>
+        <p>For questions about your points or rewards, ask the staff at the venue where you joined, or contact us:</p>
+        <ul><li>Email: <span id="mail">support email coming soon</span></li><li>Location: Kingdom of Bahrain</li></ul>
+        <p style="margin-top:10px">To remove your card, delete it from your Wallet. To have your details deleted, contact us or the venue.</p>
+      </div>
+      <div class="panel" id="privacy">
+        <h3>Privacy</h3>
+        <ul>
+          <li>We keep only your name and your phone number or email, to run your rewards card.</li>
+          <li>We never sell your details.</li>
+          <li>The venue owns its members' data; Loyalty processes it on its behalf.</li>
+          <li>You can ask for your data to be deleted at any time.</li>
+          <li>Points have no cash value. Rewards are set by each venue and may change.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Loyalty · Kingdom of Bahrain</span>
+    <span>Apple Wallet is a trademark of Apple Inc. Google Wallet is a trademark of Google LLC.</span>
+  </footer>
+</div>
+<script>
+(function(){var p="1110111100100111101011010101110101101100111110111".split(""),q=document.getElementById("qr");p.forEach(function(c){var i=document.createElement("i");if(c==="0")i.className="o";q.appendChild(i)})})();
+</script>
+</body>
+</html>
